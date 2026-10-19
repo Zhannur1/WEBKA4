@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #E6EFEC;
+    color: #16302B;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Main card */
+
+.ticket-form {
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(22, 48, 43, 0.14);
+    overflow: hidden;
+}
+
+/* Header */
+
+.form-header {
+    background-color: #0F6B5F;
+    color: white;
+    padding: clamp(1rem, 2vw, 1.5rem)
+             clamp(1.2rem, 3vw, 2rem);
+}
+
+.form-header h1 {
+    margin: 0;
+    font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+    font-weight: 700;
+}
+
+/* Form body */
+
+.form-body {
+    padding: clamp(1.2rem, 3vw, 2rem);
+}
+
+/* Labels */
+
+.form-label,
+legend {
+    margin-bottom: 0.35rem;
+    color: #16302B;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Inputs */
+
+.form-control,
+.form-select {
+    min-height: 42px;
+    padding: 0.55rem 0.75rem;
+    background-color: #F4F7F5;
+    color: #16302B;
+    border: 1px solid #D6E2DE;
+    border-radius: 9px;
+    font-size: 0.9rem;
+}
+
+.form-control::placeholder {
+    color: #6c7774;
+    opacity: 1;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: #F4F7F5;
+    border-color: #0F6B5F;
+    box-shadow: 0 0 0 0.15rem rgba(15, 107, 95, 0.15);
+}
+
+/* Floating From / To */
+
+.form-floating > .form-control {
+    min-height: 58px;
+    height: 58px;
+    padding-top: 1.45rem;
+    padding-bottom: 0.25rem;
+    background-color: #F4F7F5;
+}
+
+.form-floating > label {
+    padding: 0.7rem 0.75rem;
+    color: #6c7774;
+    font-size: 0.8rem;
+}
+
+/* One way / Round trip */
+
+.trip-type {
+    display: flex;
+    width: 100%;
+}
+
+.trip-button {
+    flex: 1;
+    padding: 0.42rem 0.5rem;
+    background-color: white;
+    color: #0F6B5F;
+    border: 1px solid #0F6B5F;
+    border-radius: 0;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+}
+
+label[for="oneWay"] {
+    border-radius: 25px 0 0 25px;
+}
+
+label[for="roundTrip"] {
+    margin-left: -1px;
+    border-radius: 0 25px 25px 0;
+}
+
+.btn-check:checked + .trip-button {
+    background-color: #0F6B5F;
+    color: white;
+    border-color: #0F6B5F;
+}
+
+/* Radio buttons and checkboxes */
+
+.form-check-input {
+    border-color: #9CB7B1;
+}
+
+.form-check-input:checked {
+    background-color: #0F6B5F;
+    border-color: #0F6B5F;
+}
+
+.form-check-input:focus {
+    border-color: #0F6B5F;
+    box-shadow: 0 0 0 0.15rem rgba(15, 107, 95, 0.15);
+}
+
+.form-check-label {
+    font-size: 0.82rem;
+}
+
+/* SMS switch */
+
+.form-switch .form-check-input {
+    background-color: #E6EFEC;
+}
+
+.form-switch .form-check-input:checked {
+    background-color: #0F6B5F;
+}
+
+/* Phone */
+
+.input-group-text {
+    background-color: #0F6B5F;
+    color: white;
+    border: 1px solid #0F6B5F;
+    border-radius: 9px 0 0 9px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.input-group .form-control {
+    border-radius: 0 9px 9px 0;
+}
+
+/* Clear */
+
+.clear-button {
+    padding: 0.55rem 1.45rem;
+    background-color: white;
+    color: #16302B;
+    border: 1px solid #16302B;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.clear-button:hover {
+    background-color: #F4F7F5;
+    color: #16302B;
+    border-color: #16302B;
+}
+
+/* Find trains */
+
+.find-button {
+    padding: 0.55rem 1.45rem;
+    background-color: #F2A93B;
+    color: #16302B;
+    border: 1px solid #F2A93B;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.find-button:hover {
+    background-color: #e99d2e;
+    color: #16302B;
+    border-color: #e99d2e;
+}
+
+/* Keyboard focus */
+
+.trip-button:focus-visible,
+.clear-button:focus-visible,
+.find-button:focus-visible {
+    outline: 3px solid #16302B;
+    outline-offset: 2px;
+}

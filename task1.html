@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book a Train Ticket</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="container py-3 py-md-5">
+        <nav class="navbar navbar-expand-md assignment-navbar">
+                <div class="container">
+
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbar"
+                        aria-controls="mainNavbar"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                                <div
+                                    class="collapse navbar-collapse"
+                                    id="mainNavbar">
+                                                <div class="navbar-nav ms-auto">
+                                                    <a class="nav-link" href="task1.html">
+                                                        Task 1
+                                                    </a>
+
+                                                    <a class="nav-link" href="task2.html">
+                                                        Task 2
+                                                    </a>
+
+                                                    <a class="nav-link" href="task3.html">
+                                                        Task 3
+                                                    </a>
+
+                                                </div>
+                                </div>
+
+                </div>
+        </nav>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+
+                <form class="ticket-form">
+
+                    <div class="form-header">
+                        <h1>Book a train ticket</h1>
+                    </div>
+
+                    <div class="form-body">
+
+                        <!-- Trip type -->
+                        <div class="row mb-4">
+
+                            <div class="col-12 col-md-5 col-lg-4">
+
+                                <div class="trip-type">
+
+                                    <input
+                                        type="radio"
+                                        class="btn-check"
+                                        name="tripType"
+                                        id="oneWay"
+                                        value="one-way"
+                                        checked
+                                    >
+
+                                    <label
+                                        class="btn trip-button"
+                                        for="oneWay"
+                                    >
+                                        One way
+                                    </label>
+
+                                    <input
+                                        type="radio"
+                                        class="btn-check"
+                                        name="tripType"
+                                        id="roundTrip"
+                                        value="round-trip"
+                                    >
+
+                                    <label
+                                        class="btn trip-button"
+                                        for="roundTrip"
+                                    >
+                                        Round trip
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- From and To -->
+                        <div class="row g-3 mb-3">
+
+                            <div class="col-12 col-md-6">
+
+                                <div class="form-floating">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="from"
+                                        name="from"
+                                        placeholder="Astana"
+                                        required
+                                    >
+
+                                    <label for="from">
+                                        From
+                                    </label>
+                                </div>
+
+                            </div>
+
+                            <div class="col-12 col-md-6">
+
+                                <div class="form-floating">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="to"
+                                        name="to"
+                                        placeholder="Almaty"
+                                        required
+                                    >
+
+                                    <label for="to">
+                                        To
+                                    </label>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Dates and passengers -->
+                        <div class="row g-3 mb-3">
+
+                            <div class="col-12 col-md-4">
+
+                                <label
+                                    for="departure"
+                                    class="form-label"
+                                >
+                                    Departure
+                                </label>
+
+                                <input
+                                    type="date"
+                                    class="form-control"
+                                    id="departure"
+                                    name="departure"
+                                    required
+                                >
+
+                            </div>
+
+                            <div class="col-12 col-md-4">
+
+                                <label
+                                    for="returnDate"
+                                    class="form-label"
+                                >
+                                    Return
+                                </label>
+
+                                <input
+                                    type="date"
+                                    class="form-control"
+                                    id="returnDate"
+                                    name="returnDate"
+                                >
+
+                            </div>
+
+                            <div class="col-12 col-md-4">
+
+                                <label
+                                    for="passengers"
+                                    class="form-label"
+                                >
+                                    Passengers
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="passengers"
+                                    name="passengers"
+                                >
+                                    <option value="1">1 adult</option>
+                                    <option value="2">2 adults</option>
+                                    <option value="3">3 adults</option>
+                                    <option value="4">4 adults</option>
+                                    <option value="5">5 adults</option>
+                                    <option value="6">6 adults</option>
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Carriage class -->
+                        <fieldset class="mb-4">
+
+                            <legend class="form-label">
+                                Carriage class
+                            </legend>
+
+                            <div class="d-flex flex-wrap gap-3">
+
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="carriage"
+                                        id="seat"
+                                        value="seat"
+                                        required
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="seat"
+                                    >
+                                        Seat
+                                    </label>
+
+                                </div>
+
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="carriage"
+                                        id="coupe"
+                                        value="coupe"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="coupe"
+                                    >
+                                        Coupé
+                                    </label>
+
+                                </div>
+
+                                <div class="form-check">
+
+                                    <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="carriage"
+                                        id="sleeper"
+                                        value="sleeper"
+                                    >
+
+                                    <label
+                                        class="form-check-label"
+                                        for="sleeper"
+                                    >
+                                        Sleeper
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </fieldset>
+
+                        <!-- Phone and Email -->
+                        <div class="row g-3 mb-3">
+
+                            <div class="col-12 col-md-6">
+
+                                <label
+                                    for="phone"
+                                    class="form-label"
+                                >
+                                    Phone
+                                </label>
+
+                                <div class="input-group">
+
+                                    <span class="input-group-text">
+                                        +7
+                                    </span>
+
+                                    <input
+                                        type="tel"
+                                        class="form-control"
+                                        id="phone"
+                                        name="phone"
+                                        placeholder="701 234 56 78"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-12 col-md-6">
+
+                                <label
+                                    for="email"
+                                    class="form-label"
+                                >
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="email"
+                                    name="email"
+                                    placeholder="name@example.com"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                        <!-- SMS -->
+                        <div class="form-check form-switch mb-2">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                role="switch"
+                                id="sms"
+                                name="sms"
+                            >
+
+                            <label
+                                class="form-check-label"
+                                for="sms"
+                            >
+                                Also send the ticket by SMS
+                            </label>
+
+                        </div>
+
+                        <!-- Agreement -->
+                        <div class="form-check mb-4">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="agreement"
+                                name="agreement"
+                                required
+                            >
+
+                            <label
+                                class="form-check-label"
+                                for="agreement"
+                            >
+                                I agree with the carriage rules
+                            </label>
+
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="row g-2 justify-content-end">
+
+                            <div
+                                class="col-12 col-md-auto
+                                order-2 order-md-1"
+                            >
+
+                                <button
+                                    type="reset"
+                                    class="btn clear-button w-100"
+                                >
+                                    Clear
+                                </button>
+
+                            </div>
+
+                            <div
+                                class="col-12 col-md-auto
+                                order-1 order-md-2"
+                            >
+
+                                <button
+                                    type="submit"
+                                    class="btn find-button w-100"
+                                >
+                                    Find trains
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

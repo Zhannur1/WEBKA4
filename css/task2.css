@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #F4F7F5;
+    color: #16302B;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Main form */
+
+.registration-form {
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(22, 48, 43, 0.14);
+    overflow: hidden;
+}
+
+/* Header */
+
+.form-header {
+    padding: 1.5rem 2rem;
+    background-color: #0F6B5F;
+    color: white;
+}
+
+.form-header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.form-header p {
+    margin: 0.3rem 0 0;
+}
+
+/* Form body */
+
+.form-body {
+    padding: 2rem;
+}
+
+/* Labels */
+
+.form-label {
+    color: #16302B;
+    font-weight: 600;
+}
+
+/* Inputs */
+
+.form-control,
+.form-select {
+    min-height: 44px;
+    background-color: #F4F7F5;
+    color: #16302B;
+    border: 1px solid #D6E2DE;
+    border-radius: 8px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: #F4F7F5;
+    border-color: #0F6B5F;
+    box-shadow: 0 0 0 0.15rem rgba(15, 107, 95, 0.15);
+}
+
+/* Invalid fields after user interaction */
+
+.form-control:user-invalid,
+.form-select:user-invalid,
+.form-check-input:user-invalid {
+    border-color: #dc3545;
+}
+
+/* Valid fields after user interaction */
+
+.form-control:user-valid,
+.form-select:user-valid {
+    border-color: #198754;
+}
+
+/* Show error messages */
+
+.form-control:user-invalid ~ .invalid-feedback,
+.form-select:user-invalid ~ .invalid-feedback,
+.form-check-input:user-invalid ~ .invalid-feedback {
+    display: block;
+}
+
+/* Radio buttons and checkboxes */
+
+.form-check-input:checked {
+    background-color: #0F6B5F;
+    border-color: #0F6B5F;
+}
+
+.form-check-input:focus {
+    border-color: #0F6B5F;
+    box-shadow: 0 0 0 0.15rem rgba(15, 107, 95, 0.15);
+}
+
+/* Motivation */
+
+textarea.form-control {
+    resize: vertical;
+}
+
+/* Submit button */
+
+.submit-button {
+    padding: 0.7rem 1.5rem;
+    background-color: #F2A93B;
+    color: #16302B;
+    border: none;
+    border-radius: 25px;
+    font-weight: 700;
+}
+
+.submit-button:hover {
+    background-color: #e99d2e;
+    color: #16302B;
+}
+
+/* Phone */
+
+@media (max-width: 767px) {
+
+    main.container {
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+
+    .form-header {
+        padding: 1.2rem;
+    }
+
+    .form-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .form-body {
+        padding: 1.2rem;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+}
